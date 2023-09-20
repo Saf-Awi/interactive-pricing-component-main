@@ -1,0 +1,253 @@
+
+:root {
+  --soft-Cyan-full-slider-bar: hsl(174, 77%, 80%);
+  --strong-Cyan-slider-bg: hsl(174, 86%, 45%);
+  --light-Grayish-Red-discount-bg: hsl(14, 92%, 95%);
+  --light-Red-dicount-text: hsl(15, 100%, 70%);
+  --pale-Blue-CTA-text: hsl(226, 100%, 87%);
+  --very-Pale-Blue-main-bg: hsl(228, 22%, 95%);
+  --light-Grayish-Blue-empty-slider-bar: hsl(224, 65%, 95%);
+  --light-Grayish-Blue-toggle-bg: hsl(223, 50%, 87%);
+  --grayish-Blue-text: hsl(225, 20%, 60%);
+  --dark-Desaturated-Blue-text-CTA-bg: hsl(227, 35%, 25%);
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap');
+
+body {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: var(--very-Pale-Blue-main-bg);
+    color: var(--grayish-Blue-text);
+}
+
+h1 {
+    text-align: center;
+    position: relative;
+    right: 15px;
+}
+
+header p {
+    position: relative;
+    left: 10px;
+}
+
+header {
+    background-image: url(./images/pattern-circles.svg);
+    background-repeat: no-repeat;
+    background-position:  60%;
+    height: 150px;
+}
+
+.flex {
+    display: flex;
+}
+
+.hero-card {
+    background-color: hsl(0, 0%, 100%);
+    padding: 40px;
+    border-radius: 20px;
+    margin-bottom: 50px;
+    position: relative;
+    bottom: 70px;
+}
+
+h1, #price {
+    color: var(--dark-Desaturated-Blue-text-CTA-bg);
+}
+
+.sliderRange {
+    width: 100%;
+    height: 13px;
+    -webkit-appearance: none; 
+    appearance: none;
+    border-radius: 20px;
+
+
+}
+
+.sliderRange::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 40px;
+    height: 40px; 
+    background-color: var(--strong-Cyan-slider-bg); 
+    border-radius: 50%; 
+    cursor: pointer;
+    background-image: url('./images/icon-slider.svg');
+    background-size: 70%; 
+    background-repeat: no-repeat;
+    background-position: center; 
+}
+
+.sliderRange::-webkit-slider-thumb:active {
+    background-color: var(--soft-Cyan-full-slider-bar);
+}
+
+
+ul {
+    list-style: none;
+    position: relative;
+    right: 20px;
+}
+
+li img {
+    margin-right: 20px;
+}
+
+
+
+
+.numbers {
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.monthly-yearly-discount-flex {
+    gap: 10px;
+    margin-left: 140px;
+    margin-top: 30px;
+
+    
+}
+
+#price {
+    font-weight: 800;
+    font-size: 35px;
+}
+
+.discount {
+    margin-left: 10px;
+    color: var(--light-Red-dicount-text);
+    background-color: var(--light-Grayish-Red-discount-bg);
+    border-radius: 20px;
+    padding: 5px;
+}
+
+.card-bottom {
+    justify-content: space-between;
+}
+
+#startBtn {
+   padding: 10px 60px;
+   background-color: var(--dark-Desaturated-Blue-text-CTA-bg);
+   color: var(--pale-Blue-CTA-text);
+   cursor: pointer;
+   border-radius: 20px;
+   margin-top: 30px;
+   margin-right: 10px;
+}
+
+#startBtn:active {
+    color: white;
+}
+
+.switch-container {
+    display: inline-block;
+    position: relative;
+    width: 40px;
+    height: 20px;
+    top: 16px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.switch-handle {
+    position: absolute;
+    top: 2.3px;
+    left: 2px;
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+
+    
+
+}
+
+.switch-checkbox {
+    display: none;
+}
+
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    position: absolute;
+    bottom: 3px;
+}
+
+.attribution a { 
+    color: var(--strong-Cyan-slider-bg); 
+}
+
+
+
+@media screen and (max-width: 769px) {
+    main {
+        width: 450px;
+    }
+
+    header p {
+        width: 200px;
+        text-align: center;
+        margin-left: 100px;
+    }
+
+    header h1 {
+        margin-left: 20px;
+    }
+
+    .hero-card {
+        bottom: 0;
+    }
+
+    .flex {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .range-bar {
+        position: relative;
+        bottom: 60px;
+    }
+
+    .flex-p-right {
+        position: relative;
+        top: 60px;
+    }
+
+    .monthly-yearly-discount-flex {
+        margin-left: 0;
+        gap: 5px;
+        margin-bottom: 50px;
+        flex-direction: row;
+        
+    }
+
+    li {
+        margin-top: 10px;
+    }
+    
+    .start-btn {
+        margin-left: 15px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
